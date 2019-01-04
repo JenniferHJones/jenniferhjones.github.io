@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="navbar-brand">Jennifer Jones</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -22,13 +23,13 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="index.html" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="portfolio.html" class="nav-link">Portfolio</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a href="contact .html" class="nav-link">Contact</a>
                 </li>
             </ul>
@@ -38,38 +39,37 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>About Me</h2>
+                <h2>Contact</h2>
                 <hr>
             </div>
-        </div>
-        <div class="row" id="main">
-            <div class="col-md-12 main">
-                <img src="./images/Headshot.jpg" class="img-fluid" alt="Responsive image">
-                <p>My name is Jennifer but I like to go by JJ. I am a Data Analyst at the UC Davis
-                    Utilities Department where I have been working for the last 10 years. However, I have been
-                    working on campus in various positions since October 2002. At this point in my career, I
-                    need to pursue outside education to continue to advance. Coding is a field with infinite
-                    possibilities as it pertains to all industries. While I have limited web development skills
-                    at this time, I look forward to acquiring the technical expertise that will open up new
-                    career paths. One of several highly appealing aspects of web development is the potential for
-                    working remotely. With traffic getting worse all the time and volatile gas prices, I love
-                    the idea of avoiding a daily commute. </p>
-                <p>On a personal note, I am obsessed with the television show <em>The Great British Bake Off</em>,
-                    which as you probably guessed, is a baking competition. I don't usually care for the
-                    personal drama seen on most reality TV shows. However, this series is filmed in
-                    Britain, and they seem to promote a kinder, more respectful approach. The contestants may
-                    cry because the judges were a little harsh or their bake didn't turn out well, but it's
-                    never because they were mean to each other. After purchasing one of the cookbooks inspired
-                    by the show, I have had varying degrees of success and generally foist the results on my
-                    co-workers who have been happy to eat the bakes and give me feedback. Now I just need
-                    to find a balance between baking and exercise!</p>
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputName">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName" placeholder="Full Name">
+                    </div>
             </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="email@gmail.com">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleInputMessage">Message</label>
+                    <textarea class="form-control" rows="10" id="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <span class="text-light">
+            <span class="text-dark">
                 <p class="text-center">Copyright &copy;</p>
             </span>
         </div>
