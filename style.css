@@ -27,6 +27,10 @@ h2 {
     margin-bottom: 50px;
 }
 
+.empty {
+    height: 50px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
