@@ -1,0 +1,50 @@
+body {
+    color: white;
+    font-family: 'Sirin Stencil', cursive;
+    text-align: center;
+    background-image: linear-gradient(to right, #1a2738, #004e92);
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+#instructions {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-body {
+    background-color: #1a2738;
+}
+
+.crystals {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#crystal1 {
+    width: 100px;
+    height: 120px;
+    border: 1px solid white;
+    margin-right: 50px;
+}
+
+#crystal2 {
+    width: 100px;
+    height: 120px;
+    border: 1px solid white;
+    margin-right: 50px;
+}
+
+#crystal3 {
+    width: 100px;
+    height: 120px;
+    border: 1px solid white;
+    margin-right: 50px;
+}
+
+#crystal4 {
+    width: 100px;
+    height: 120px;
+    border: 1px solid white;
+}
