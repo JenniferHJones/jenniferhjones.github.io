@@ -4,6 +4,7 @@ $(document).ready(function () {
     var winTotal = 0;
     var lossTotal = 0;
     var counter = 0;
+    var audio = new Audio("./assets/Tada.mp3");
 
     // computer displays random number between 19 - 120
     var numberDisplay = Math.floor((Math.random() * 102) + 19);
@@ -35,6 +36,7 @@ $(document).ready(function () {
     function win() {
         winTotal++;
         $("#win").html(winTotal);
+        audio.play();
         alert("You won! Let's play again.");
         reset();
     }
