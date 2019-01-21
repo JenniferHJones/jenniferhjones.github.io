@@ -1,0 +1,53 @@
+body {
+    font-family: 'Philosopher', sans-serif;
+    background-image: linear-gradient(to right, #1a2738, #004e92);
+}
+
+.container {
+    margin-top: 20px;
+    height: 700px;
+    color: white;
+    background-color: #1a2738;
+}
+
+#title {
+    font-size: 4em;
+}
+#start {
+    margin-top: 200px;
+}
+
+#timer {
+    margin-top: 75px;
+    font-size: 2em;
+    color: dodgerblue;
+}
+
+#timeUp {
+    margin-top: 75px;
+    font-size: 2em;
+    color: red;
+}
+
+#question {
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+
+#displayAnswer {
+    margin-top: 50px;
+    text-shadow: 3px 1px red;
+    font-style: italic;
+    font-size: 3em;
+}
+
+#displayScore {
+    margin-top: 50px;
+    font-size: 3em;
+}
+
+#wrapper {
+    margin-top: 50px;
+    font-size: 2em;
+}
+
