@@ -1,8 +1,8 @@
 # Trivia Game
 
-## Interesting Random Trivia
+## Absolutely Random Trivia
 
-The game begins with the title and a start button. Once clicked, the button disappears and a timer starts counting down from 5 seconds. 
+The game begins with the title and a start button. Once clicked, the button disappears and a timer starts counting down from 10 seconds. 
 
 User clicks on one of the possible answer buttons and the game records the answer and moves on to the next question.
 
