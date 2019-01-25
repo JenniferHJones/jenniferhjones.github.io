@@ -117,7 +117,7 @@ $(document).ready(function () {
     }
 
     function displayQuestion() {
-        timer = 5;
+        timer = 10;
         intervalID = setInterval(displayTime, 1000);
         $("#displayAnswer").empty();
         $("#timeUp").hide();
