@@ -5,7 +5,7 @@ body {
 
 .container {
     margin-top: 20px;
-    height: 700px;
+    height: 800px;
     color: white;
     background-color: #1a2738;
 }
@@ -32,6 +32,10 @@ body {
 #question {
     margin-top: 50px;
     font-size: 2.5em;
+}
+
+.choices {
+    font-size: 2em;
 }
 
 #displayAnswer {
