@@ -10,13 +10,8 @@ $(document).ready(function () {
     var numberDisplay = Math.floor((Math.random() * 102) + 19);
     $("#randomNumber").html(numberDisplay);
     console.log(numberDisplay);
-
-    // computer assigns random number between 1 - 12 to crystals
-    var randomCrystal1 = Math.floor((Math.random() * 12) + 1);
-    var randomCrystal2 = Math.floor((Math.random() * 12) + 1);
-    var randomCrystal3 = Math.floor((Math.random() * 12) + 1);
-    var randomCrystal4 = Math.floor((Math.random() * 12) + 1);
-    console.log(randomCrystal1, randomCrystal2, randomCrystal3, randomCrystal4);
+    
+    reset();
 
     // function to reset game after playing a round
     function reset() {
