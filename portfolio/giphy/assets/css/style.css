@@ -21,5 +21,9 @@ body {
 }
 
 .moreImages {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#images p {
+    margin-bottom: 0;
 }
