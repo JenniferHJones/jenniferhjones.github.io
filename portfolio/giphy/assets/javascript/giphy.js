@@ -35,7 +35,6 @@ $(document).ready(function () {
         $("#images").empty();
         var sport = $(this).attr("data-name");
 
-        queryURL = "https://api.giphy.com/v1/gifs/search?api_key=UlsGZGJN2JtxEIbf0FazuLxh7m2ASR2x";
         offsetNum = 0;
         queryURL = queryURL + "&q=" + sport + "+fail&rating=&limit=10";
 
