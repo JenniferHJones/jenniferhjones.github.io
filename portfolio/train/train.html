@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <link rel="reset" type="text/css" href="../../reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar-brand">Jennifer Jones</div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="../../portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="card" id="header">
+            <div class="card-header bg-success text-white text-center">
+                <h1><i class="fas fa-train"> Green Track Trains</i></h1>
+                <br>
+                <h5 id="currentTime">Current Time: </h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card" id="addTrain">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="text-center">Add New Train</h5>
+                    </div>
+
+                    <div class="card-body border border-success">
+                        <form>
+                            <div class="form-row align-items-center">
+                                <div class="form-group col-sm-3">
+                                    <label for="trainName">Train Name</label>
+                                    <input type="text" class="form-control" id="trainName">
+                                </div>
+
+                                <div class="form-group col-sm-4">
+                                    <label for="destination">Destination (City, State)</label>
+                                    <input type="text" class="form-control" id="destination">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label for="FirstTrainTime">First Train (HH:mm - military time)</label>
+                                    <input type="text" class="form-control" id="firstTime">
+                                </div>
+
+                                <div class="form-group col-sm-2">
+                                    <label for="frequency">Frequency (min)</label>
+                                    <input type="text" class="form-control" id="frequency">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-default bg-success text-white btn-sm" id="add-train"><i
+                                                class="fa fa-plus"></i> Train</button>
+                                        <button class="btn btn-default bg-success text-white ml-5 btn-sm" id="clear-all">
+                                            <i class="fa fa-trash"></i> Clear Form</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card" id="schedule">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="text-center">Current Train Schedule</h5>
+                    </div>
+
+                    <div class="card-body border border-success">
+                        <table class="table" id="trainTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency <br>(min)</th>
+                                    <th scope="col">Next <br>Arrival</th>
+                                    <th scope="col">Minutes <br>Away</th>
+                                    <th scope="col" id="remove">Remove <br>Train</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+
+</html>

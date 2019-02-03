@@ -1,0 +1,16 @@
+#header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#addTrain {
+    margin-bottom: 20px;
+}
+
+body {
+    background-image: url(../../../../images/traintrack.jpg);
+}
+
+#trainTable {
+    text-align: center;
+}
