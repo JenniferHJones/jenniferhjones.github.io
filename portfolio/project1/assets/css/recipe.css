@@ -1,0 +1,93 @@
+.nav-item a:hover, .navbar a:hover {
+    color: white !important;
+    text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px orange;
+    cursor: pointer;
+}
+
+.nav-item {
+    font-size: 20px;
+}
+
+body{
+    background-image: url(../images/recipe.jpg);
+    font-family: 'Mukta', sans-serif;
+    background-attachment: fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.jumbotron{
+    font-size: 30px;
+    background: rgba(211, 211, 211, 0.80);
+    text-align: center;
+    margin: 20px auto;
+}
+.container2{
+    width: inherit;
+    height: 340px;
+}
+button{
+    margin: 5px;
+}
+.newRow{
+    width: inherit;
+}
+.info{
+    width: inherit;
+}
+
+.link{
+    align-content: center;
+}
+h2{
+    text-align: center;
+}
+
+.col-sm-outer {
+   width: 25%;
+}
+
+#results {
+padding: 0;
+}
+html{ font-family: 'Mukta', sans-serif;
+}
+
+/* ############# media @1000px ##############*/
+@media only screen and (max-width: 1000px){
+    img {
+        width: 150px;
+        float: left
+    }
+
+   .col-sm-outer {
+       width: 20px;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .ingredients{
+        text-align: center;
+        padding: 10px;
+    }
+
+    .info.row {
+        align-content: center;
+        text-align: center;
+    }
+
+    .info.title.col-sm-8 {
+        align-content: center;
+        float: left;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .col-sm {
+        margin: auto;
+    }
+}

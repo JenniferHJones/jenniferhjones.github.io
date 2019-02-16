@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ############ Reset CSS ############ -->
+    <link href="./assets/css/reset.css" rel="stylesheet">
+    <!-- ############ Bootstrap CDN ############ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- ############ Animate CSS ############ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- ############ Google Font ############ -->
+    <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+    <!-- ############ Page CSS ############ -->
+    <link href="./assets/css/recipe.css" rel="stylesheet">
+    <title>Crave Sacramento</title>
+</head>
+<!-- ############ Nav Bar ############ -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">
+        <h1>Crave Sacramento</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-2">
+            <li class="nav-item mr-2">
+                <a class="nav-link" href="./RestaurantSearch.html">Restaurant Search</a>
+            </li>
+            <li class="nav-item mr-2 active">
+                <a class="nav-link" href="./RecipeSearch.html">Recipe Search<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="container container1 jumbotron align-self-center jumbotron-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="display-4 bounceIn">What do you Crave?</h1>
+                <h1 class="display-4 bounceIn">Search for a Recipe</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container container2 jumbotron align-self-center jumbotron-fluid">
+        <div class="row">
+            <div class="col-sm-outer">
+            </div>
+            <div class="col-sm">
+                <form>
+                    <div class="form-group">
+                        <label for="keyword">Keyword for Recipe</label>
+                        <input type="keyword" class="form-control" id="keyWordSearch" aria-describedby="keyword"
+                            placeholder="Enter Keyword">
+                    </div>
+                    <div class="form-group">
+                        <label for="preptime">Prep Time (in minutes)</label>
+                        <input type="preptime" class="form-control" id="prepTimeSearch" placeholder="30">
+                    </div>
+                    <button type="submit" id="search"
+                        class="btn btn-warning btn-outline-secondary">Search</button>
+                </form>
+            </div>
+            <div class="col-sm-outer">
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+    </div>
+
+    <!-- ############ Bootstrap, Ajax, & jQuery Scripts ############ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="./assets/javascript/recipe.js"></script>
+</body>
+
+</html>

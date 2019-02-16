@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- ############ Reset CSS ############ -->
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <!-- ############ Bootstrap CDN ############ -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- ############ Animate CSS ############ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <!-- ############ Google Font ############ -->
+  <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
+  <!-- ############ Page CSS ############ -->
+  <link href="assets/css/restaurant.css" rel="stylesheet">
+  <title>Crave Sacramento</title>
+</head>
+<!-- ############ Nav Bar ############ -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="./index.html">
+    <h1 class>Crave Sacramento</h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-2">
+      <li class="nav-item mr-2 active">
+        <a class="nav-link" href="./RestaurantSearch.html">Restaurant Search<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="./RecipeSearch.html">Recipe Search</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- ############ Body Begins ############ -->
+
+<body>
+  <!-- ############ header area ############ -->
+  <div class="top-bar">
+    <h1 class="display-4 bounceIn">What do you Crave?</h1>
+    <h1 class="display-4 bounceIn">Search for a Restaurant</h1>
+  </div>
+
+  <!-- #################### Form Area ###################### -->
+  <div id="add-search">
+    <form>
+      <div class="form-group">
+        <label for="cuisine">Restaurant Name or Cuisine</label>
+        <input type="text" class="form-control" id="keyword" placeholder="What do you crave?">
+      </div>
+      <button type="submit" id="searchRestaurant" class="btn btn-warning btn-outline-secondary">Submit</button>
+    </form>
+  </div>
+
+  <!-- ############ Results Area ################ -->
+  <div id="search">
+    <div class="results">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Restaurant Name</th>
+            <th scope="col">Cuisine</th>
+            <th scope="col">Sacramento Location</th>
+            <th scope="col">Ratings</th>
+            <th scope="col">Average $ for 2</th>
+            <th scope="col">Menu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ############ TBODY ############ -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6" class="moreResults">
+              <button id="more" class='btn btn-warning btn-outline-secondary more'>More Results</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ############ Bootstrap, Ajax, & jQuery Scripts ############ -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="assets/javascript/restaurant.js"></script>
+</body>
+
+</html>
