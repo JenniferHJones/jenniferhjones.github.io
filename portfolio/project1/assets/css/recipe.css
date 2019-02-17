@@ -10,7 +10,7 @@
 
 body{
     background-image: url(../images/recipe.jpg);
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     background-attachment: fixed;
     -webkit-background-size: cover; 
     -moz-background-size: cover;
@@ -49,9 +49,11 @@ h2{
 }
 
 #results {
-padding: 0;
+    padding: 0;
 }
-html{ font-family: 'Mukta', sans-serif;
+
+html{ 
+    font-family: 'Oxygen', sans-serif;
 }
 
 /* ############# media @1000px ##############*/

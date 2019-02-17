@@ -12,10 +12,14 @@
   display: none;
 }
 
+html {
+  font-family: 'Oxygen', sans-serif;
+}
+
 body {
   background-image: url(../images/resorrecimage.png);
   background-attachment: fixed;
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -1,6 +1,6 @@
-# Crave Sacramento
+# Sacramento Cravings
 
-[Crave Sacramento application link](https://jenniferhjones.github.io/Project1/)
+[Sacramento Cravings application link](https://jenniferhjones.github.io/portfolio/project1/)
 
 
 ## Description
@@ -27,4 +27,4 @@ This application was written for project 1 of the UCD Coding Bootcamp. Our site 
 
 ## Sample View
 
-![Crave Sacramento App Screenshot](/assets/images/screenshot1.png/)
+![Sacramento Cravings App Screenshot](./assets/images/screenshot1.png)
