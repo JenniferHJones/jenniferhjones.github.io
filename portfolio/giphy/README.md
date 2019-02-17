@@ -1,6 +1,6 @@
 # GIPHY API - Sports Fails
 
-[Sports Fail application link](https://jenniferhjones.github.io/giphy/)
+[Sports Fail application link](https://jenniferhjones.github.io/portfolio/giphy/giphy.html)
 
 ## Description
 * User may click on existing sport buttons to view 10 GIFs from giphy.com with associated titles, sources, and ratings.
