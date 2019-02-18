@@ -2,9 +2,14 @@
     background-color: dodgerblue;
 }
 
+.link {
+    font-size: 25px;
+    color: white;
+}
+
 body {
     color: white;
-    background-image: url("../../../../assets/images/psychic.jpg");
+    background-image: url("../../assets/images/psychic.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

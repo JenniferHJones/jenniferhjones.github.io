@@ -2,6 +2,11 @@
     font-size: 25px;
 }
 
+.link {
+    font-size: 25px;
+    color: white;
+}
+
 .dropdown-item:hover {
     background-color: dodgerblue;
 }
@@ -39,7 +44,7 @@ body {
     justify-content: center;
   }
   
-.github {
+.github, .linkedin {
     margin-right: 50px;
 } 
 

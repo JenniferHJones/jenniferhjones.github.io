@@ -2,6 +2,11 @@
     background-color: dodgerblue;
 }
 
+.link {
+    font-size: 25px;
+    color: white;
+}
+
 #header {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -12,7 +17,7 @@
 }
 
 body {
-    background-image: url(../traintrack.jpg);
+    background-image: url(traintrack.jpg);
 }
 
 #trainTable {

@@ -9,6 +9,11 @@ body {
     background-color: dodgerblue;
 }
 
+.link {
+    font-size: 25px;
+    color: white;
+}
+
 .navbar-nav {
     text-align: left;
 }

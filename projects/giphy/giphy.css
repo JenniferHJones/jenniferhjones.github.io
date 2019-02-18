@@ -2,6 +2,11 @@
     background-color: dodgerblue;
 }
 
+.link {
+    font-size: 25px;
+    color: white;
+}
+
 .row {
     margin-top: 10px;
 }
@@ -19,12 +24,12 @@ input {
 }
 
 h1 {
-    background-image: url("../../../../assets/images/regal.png");
+    background-image: url("../../assets/images/regal.png");
 }
 
 body {
     font-family: 'Philosopher', sans-serif;
-    background-image: url("../../../../assets/images/regal.png");
+    background-image: url("../../assets/images/regal.png");
 }
 
 p {
