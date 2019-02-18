@@ -17,6 +17,10 @@ body {
     background-image: linear-gradient(to right, white, #80bae2);
 }
 
+.contact {
+    font-size: 20px;
+}
+
 .main-div {
     float: left;
     font-size: 20px;
