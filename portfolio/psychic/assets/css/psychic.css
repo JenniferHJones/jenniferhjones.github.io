@@ -1,6 +1,10 @@
+.dropdown-item:hover {
+    background-color: dodgerblue;
+}
+
 body {
     color: white;
-    background-image: url("../../../../images/psychic.jpg");
+    background-image: url("../../../../assets/images/psychic.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -14,7 +14,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="navbar-brand ml-2">Jennifer Jones</div>
+        <div class="navbar-brand">Jennifer Jones</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,6 +23,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mr-3">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item mr-3 active">
                     <a href="profile.html" class="nav-link">Who am I?</a>
                 </li>
                 <li class="nav-item dropdown mr-3">
@@ -48,16 +51,29 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <div class="container rounded mt-5 pt-2 pb-2" id="profile">
         <div class="row">
-            <!-- <div class="col"> -->
-            <h1 class="mb-5">Full-Stack Web Development</h1>
-            <!-- </div> -->
+            <div class="col-md-12">
+                <h2>Who am I?</h2>
+                <hr>
+            </div>
         </div>
-        <div class="row mt-5 ml-5">
-            <!-- <div class="col"> -->
-            <h2>My goal is to help you reach yours.</h2>
-            <!-- </div> -->
+        <div class="row">
+            <div class="col-md-12 main-div">
+                <img src="./assets/images/Headshot.jpg" class="img-fluid rounded JJ" alt="Responsive image">
+                <p>My name is Jennifer but I often go by JJ. I am a Data Analyst at the University of California Davis
+                    Utilities Department and have been working on campus in various positions since October 2002.</p>
+                <p>I am attending a six-month full-stack web development bootcamp through the UCD Continuing
+                    and Professional Education department and will graduate in June 2019. Coding is a field with
+                    infinite possibilities as it pertains to all industries. I love it because I
+                    get to take a user's experience and make it better.</p>
+                <div class="flex-container">
+                    <a href="https://github.com/JenniferHJones/jenniferhjones.github.io" target="_blank"><img
+                            src="./assets/images/GitHub-Mark-32px.png" class="github" alt="github logo"></a>
+                    <a href="https://www.linkedin.com/in/jennifer-jones-131555103/" target="_blank"><img
+                            src="./assets/images/In-Black-34px-R.png" class="linkedin" alt="linkedin logo"></a>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -5,6 +5,10 @@ body {
     background-image: linear-gradient(to right, #1a2738, #004e92);
 }
 
+.dropdown-item:hover {
+    background-color: dodgerblue;
+}
+
 .navbar-nav {
     text-align: left;
 }

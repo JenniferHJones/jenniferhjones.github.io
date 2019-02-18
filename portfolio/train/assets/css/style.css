@@ -1,3 +1,7 @@
+.dropdown-item:hover {
+    background-color: dodgerblue;
+}
+
 #header {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -8,7 +12,7 @@
 }
 
 body {
-    background-image: url(../../../../images/traintrack.jpg);
+    background-image: url(../traintrack.jpg);
 }
 
 #trainTable {

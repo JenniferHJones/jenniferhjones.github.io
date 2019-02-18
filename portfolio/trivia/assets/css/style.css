@@ -1,3 +1,7 @@
+.dropdown-item:hover {
+    background-color: dodgerblue;
+}
+
 body {
     font-family: 'Philosopher', sans-serif;
     background-image: linear-gradient(to right, #1a2738, #004e92);

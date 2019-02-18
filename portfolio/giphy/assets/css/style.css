@@ -1,3 +1,7 @@
+.dropdown-item:hover {
+    background-color: dodgerblue;
+}
+
 .row {
     margin-top: 10px;
 }
@@ -15,12 +19,12 @@ input {
 }
 
 h1 {
-    background-image: url("../../../../images/regal.png");
+    background-image: url("../../../../assets/images/regal.png");
 }
 
 body {
     font-family: 'Philosopher', sans-serif;
-    background-image: url("../../../../images/regal.png");
+    background-image: url("../../../../assets/images/regal.png");
 }
 
 p {

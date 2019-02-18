@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="reset" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="reset" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Portfolio</title>
 </head>
 
@@ -16,50 +16,73 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="navbar-brand">Jennifer Jones</div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">About</a>
+                <li class="nav-item mr-3">
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <li class="nav-item mr-3">
+                    <a href="profile.html" class="nav-link">Who am I?</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item dropdown mr-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="portfolio/psychic/psychic.html">Psychic Game</a>
+                        <a class="dropdown-item" href="portfolio/crystal/crystal.html">Crystal Collector Game</a>
+                        <a class="dropdown-item" href="portfolio/trivia/trivia.html">Trivia Game</a>
+                        <a class="dropdown-item" href="portfolio/giphy/giphy.html">Sports Fail GIFs</a>
+                        <a class="dropdown-item" href="portfolio/train/train.html">Train Scheduler</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="portfolio/Sacramento_Cravings/cravings.html">Sacramento
+                            Cravings</a>
+                    </div>
+                </li>
+                <li class="nav-item mr-3 active">
                     <a href="contact.html" class="nav-link">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container contact">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col mt-5">
                 <h2>Contact</h2>
-                <hr>
             </div>
-            <div class="col-md-12">
+        </div>
+        <div class="row">
+            <div class="col">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputName">Name</label>
-                        <input type="text" class="form-control" id="exampleInputName" placeholder="Full Name">
+                        <label for="exampleInputName" class="font-weight-bold">Name</label>
+                        <input type="text" class="form-control border border-white" id="exampleInputName"
+                            placeholder="Full Name">
                     </div>
             </div>
-            <div class="col-md-12">
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="email@gmail.com">
+                    <label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+                    <input type="email" class="form-control border border-white" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="email@gmail.com">
                 </div>
             </div>
-            <div class="col-md-12">
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="form-group">
-                    <label for="exampleInputMessage">Message</label>
-                    <textarea class="form-control" rows="10" id="message"></textarea>
+                    <label for="exampleInputMessage" class="font-weight-bold">Message</label>
+                    <textarea class="form-control border border-white" rows="5" id="message" aria-describedby="message"
+                        placeholder="Write a message"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
@@ -74,11 +97,14 @@
             </span>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
 
