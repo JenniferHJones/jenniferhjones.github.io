@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="../../reset.css" rel="stylesheet">
+  <link href="../../assets/css/reset.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -52,101 +52,64 @@
         </div>
       </li>
       <li class="nav-item mr-3">
-          <a href="../../profile.html" class="nav-link">Profile</a>
+        <a href="../../profile.html" class="nav-link">Profile</a>
       </li>
     </ul>
   </div>
 </nav>
 
 <body>
-
-  <div class="container0 align-self-center" id="intro">
+  <!-- Intro Text -->
+  <div class="align-self-center" id="intro">
     <div class="animated fadeInUpBig">
-      <p>Feeling indecisive about dinner tonight?</p>
+      <p>What's for dinner tonight?</p>
       <br>
-      <p>Log in to find inspiration to cook something delicious at home or to find a restaurant for an evening out.</p>
+      <p>Log in to find recipes to cook something delicious at home or to search for a local restaurant.</p>
     </div>
   </div>
 
-  <div class="container1 container jumbotron align-self-center jumbotron-fluid" id="loginDiv">
-    <div class="login">
+  <!-- Login Modal -->
+  <div class="bg-modal-login">
+    <div class="login modal-content">
       <form>
-        <div class="row">
-          <div class="col title ml-3">Login</div>
+        <div class="closeLogin">+</div>
+        <div class="mt-4">
+          <h3>Login</h3>
         </div>
-        <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" class="form-control email" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control password" placeholder="Password">
-            </div>
-            <div class="col-sm-2"></div>
-          </div>
+        <div class="form-group">
+          <input type="email" class="mt-5 form-control email" placeholder="Email">
         </div>
-        <div class="row">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-6">
-            <button type="submit" class="btn btn-warning btn-outline-secondary submit">Login</button>
-          </div>
+        <div class="form-group">
+          <input type="password" class="mt-5 form-control password" placeholder="Password">
         </div>
+        <button type="submit" class="mt-4 btn btn-warning btn-outline-secondary submit">Login</button>
       </form>
-      <div class="col-sm-3"></div>
-    </div>
-    <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
-        <p class="question mt-5">Not a member? <a class="ml-3" id="showRegister" href="#"> Sign Up</a></p>
-      </div>
-      <div class="col-sm-2"></div>
     </div>
   </div>
 
-  <div class="container2 container jumbotron align-self-center jumbotron-fluid" id="registerDiv">
-    <div class="register">
+  <!-- Register Modal -->
+  <div class="bg-modal-reg">
+    <div class="register modal-content">
       <form>
-        <div class="row">
-          <div class="col title ml-3">Register</div>
+        <div class="closeReg">+</div>
+        <div class="mt-4">
+          <h3>Register</h3>
         </div>
-        <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" class="form-control email" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control password" placeholder="Password">
-            </div>
-            <div class="col-sm-2"></div>
-          </div>
+
+        <div class="form-group">
+          <input type="email" class="mt-5 form-control email" placeholder="Email">
         </div>
-        <div class="row">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-6">
-            <button type="submit" class="btn btn-warning btn-outline-secondary submit">Register</button>
-          </div>
+        <div class="form-group">
+          <input type="password" class="mt-5 form-control password" placeholder="Password">
         </div>
+        <button type="submit" class="mt-4 btn btn-warning btn-outline-secondary submit">Register</button>
       </form>
-      <div class="col-sm-3"></div>
-    </div>
-    <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
-        <p class="question mt-5">Already a member? <a class="ml-3" id="showLogin" href="#"> Sign In</a></p>
-      </div>
-      <div class="col-sm-2">
-      </div>
     </div>
   </div>
 
+  <!-- Navigate to Restaurant or Recipe -->
   </div>
-  <div class="container3 animated fadeInUpBig" id="choicesDiv">
+  <div class="animated fadeInUpBig" id="choicesDiv">
     <div class="row">
       <div class="col-sm mb-5">
         <p class="night">Where will the night take you?</p>

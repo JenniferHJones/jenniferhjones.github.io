@@ -1,26 +1,21 @@
 $(document).ready(function () {
 
-    // Function to run when user clicks Register button in navbar
-    $("#navRegister").click(displayRegister);
-
-    function displayRegister() {
-        console.log("register clicked");
-        $("#registerDiv").show();
-        $("#loginDiv").hide();
-        $("#choicesDiv").hide();
-        $("#intro").hide();
-    }
-
-    // Function to run when user clicks Login button in navbar
-    $("#navLogin").click(displayLogin);
-
-    function displayLogin() {
-        console.log("login clicked");
-        $("#loginDiv").show();
-        $("#registerDiv").hide();
-        $("#choicesDiv").hide();
-        $("#intro").hide();
-    }
+    // on click function to display Register modal if Register button clicked
+    document.getElementById("navRegister").addEventListener("click", function () {
+        document.querySelector(".bg-modal-reg").style.display = "flex";
+    });
+    // on click function to hide Register modal if x is pressed
+    document.querySelector(".closeReg").addEventListener("click", function () {
+        document.querySelector(".bg-modal-reg").style.display = "none";
+    });
+    // on click function to display Login modal if Register button clicked
+    document.getElementById("navLogin").addEventListener("click", function () {
+        document.querySelector(".bg-modal-login").style.display = "flex";
+    });
+    // on click function to hide Login modal if x is pressed
+    document.querySelector(".closeLogin").addEventListener("click", function () {
+        document.querySelector(".bg-modal-login").style.display = "none";
+    });
 
     // Function to run when user clicks Logout button in navbar
     $("#navLogout").click(userLogOut);
@@ -29,14 +24,8 @@ $(document).ready(function () {
         console.log("logout clicked");
         firebase.auth().signOut();
         $("#choicesDiv").hide();
-        $("#loginDiv").hide();
-        $("#registerDiv").hide();
         $("#intro").show();
     };
-
-    $("#showLogin").click(displayLogin);
-
-    $("#showRegister").click(displayRegister);
 
     // Firebase setup
     var config = {
@@ -85,6 +74,8 @@ $(document).ready(function () {
             .catch(function (err) {
                 console.log(err);
             })
+        document.querySelector(".bg-modal-reg").style.display = "none";
+
     });
 
     // Function to login existing user
@@ -101,19 +92,7 @@ $(document).ready(function () {
             .catch(function (err) {
                 console.log(err);
             });
+        document.querySelector(".bg-modal-login").style.display = "none";
     });
-
-    // function validate() {
-    //     // to validate email addresses entered, this API works!
-    //     var email;
-    //     var queryURL = "http://apilayer.net/api/check?access_key=079da406e2f7aaa1714f04c3adcc3efc&email=" + email + "&smtp=1&format=1"
-
-    //     $.ajax({
-    //         url: queryURL,
-    //         method: "GET",
-    //     }).then(function (response) {
-    //         console.log(response);
-    //     });
-    // };
 
 })
