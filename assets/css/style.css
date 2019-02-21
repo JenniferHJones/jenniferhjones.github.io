@@ -13,7 +13,7 @@
 }
 
 body {
-    /* position: relative; */
+    background-position: top;
     background-image: url(../images/beach.jpg);
     height: 100%;
     background-repeat: no-repeat;
