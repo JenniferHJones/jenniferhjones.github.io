@@ -1,6 +1,6 @@
 # Sacramento Cravings
 
-[Sacramento Cravings application link](https://jenniferhjones.github.io/portfolio/Sacramento_Cravings/cravings.html)
+[Sacramento Cravings application link](https://jenniferhjones.github.io/projects/Sacramento_Cravings/cravings.html)
 
 
 ## Description

@@ -1,6 +1,6 @@
 # Psychic Game
 
-[Psychic Game application link](https://jenniferhjones.github.io/portfolio/psychic/psychic.html)
+[Psychic Game application link](https://jenniferhjones.github.io/projects/psychic/psychic.html)
 
 ## Description
 The computer selects a random letter of the alphabet and the user has 9 chances to guess the correct letter. 

@@ -1,6 +1,6 @@
 # Crystal Collector Game
 
-[Crystal Collector application link](https://jenniferhjones.github.io/portfolio/crystal/crystal.html)
+[Crystal Collector application link](https://jenniferhjones.github.io/projects/crystal/crystal.html)
 
 ## Description
 
