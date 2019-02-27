@@ -1,6 +1,6 @@
 # Trivia Game - Absolutely Random Trivia
 
-[Trivia Game application link](https://jenniferhjones.github.io/portfolio/trivia/trivia.html)
+[Trivia Game application link](https://jenniferhjones.github.io/projects/trivia/trivia.html)
 
 ## Description
 The game begins with the title and a start button. Once clicked, the button disappears and a timer starts counting down from 10 seconds. 
