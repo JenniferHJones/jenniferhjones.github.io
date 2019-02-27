@@ -94,6 +94,15 @@ input {
     margin: 15px auto;
 }
 
+.carousel-inner > .carousel-item > .view > img {
+    width: 900px;
+    height: 600px;
+  }
+
+#carousel-projects {
+    background:  black;
+}
+
 footer {
     position: fixed;
     bottom: 0;
