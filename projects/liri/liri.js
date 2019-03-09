@@ -143,6 +143,6 @@ function logIt(data) {
         if (error) {
             return console.log(error);
         }
-        console.log("Log file updated");
+        // console.log("Log file updated");
     });
 }
