@@ -13,3 +13,4 @@ This is a collection of the projects I worked on while attending the six-month F
 5. [Train Scheduler](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/train)
 6. [Sacramento Cravings](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/Sacramento_Cravings) (first group project)
 7. [LIRI Node App](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/liri)
+8. [Bamazon Node App](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/bamazon)
