@@ -23,6 +23,10 @@ ___
 4. App displays confirmation message that user bought desired number of product for total cost; user may then choose to make another purchase or EXIT.
 ![console example](./images/customerFinal.PNG)
 
+5. If user tries to buy more units than are in the inventory, app informs the user and asks what they want to do.
+![console example](./images/customerMessage.PNG)
+
+
 ## User Interface - Manager View
 1. Enter `node bamazonManager.js`.
 
