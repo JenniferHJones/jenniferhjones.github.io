@@ -1,0 +1,38 @@
+.container {
+    font-family: 'Assistant', sans-serif;
+    margin-top: 25px;
+}
+
+body {
+    background-image: linear-gradient(to right, white, #80bae2);
+}
+
+#modalMatch {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    width: 900px;
+    height: auto;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+#matchPhoto {
+    width: 50%;
+    height: 50%;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+}
