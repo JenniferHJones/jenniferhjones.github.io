@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url(../img/eat.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Monda', sans-serif;
+}
+
+#title {
+    padding-top: 20px;
+    color: red;
+}
+
+input {
+    padding-left: 5px;
+}
+
+.activity {
+    text-align: center;
+}
+
+h4 {
+    text-decoration-line: underline;
+    color: red;
+}
