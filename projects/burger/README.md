@@ -5,7 +5,7 @@ This is a full-stack application that uses MySQL, Node.js, and Express to query 
 
 ---
 ## Live Demo
-This application is deployed to [Heroku](https://apple-tart-46373.herokuapp.com/). 
+This application is deployed to [Heroku](https://guarded-badlands-62231.herokuapp.com/). 
 
 ---
 ## User Setup for Local Installation
