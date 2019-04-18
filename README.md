@@ -16,3 +16,4 @@ This is a collection of the projects I worked on while attending the six-month F
 8. [Bamazon Node App](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/bamazon)
 9. [Friend Finder App](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/friend_finder)
 10. [Eat the Burger App](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/burger)
+11. [Trade-FY](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/Trade-FY) (second group project)
