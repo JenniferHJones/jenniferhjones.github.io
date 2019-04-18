@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+   <meta name="author" content="">
+   <title>Trade-FY - Responsive Stock Trading User Interface</title>
+   <link rel="stylesheet" href="app/css/bootstrap.css">
+   <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.css">
+   <link rel="stylesheet" href="plugins/animo/animate%2banimo.css">
+   <link rel="stylesheet" href="plugins/csspinner/csspinner.min.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+   <link rel="stylesheet" href="app/css/app.css">
+   <script src="plugins/modernizr/modernizr.js"></script>
+ 
+</head>
+
+<body>
+
+   <section class="wrapper">
+      <nav class="navbar navbar-default navbar-top navbar-fixed-top">
+         <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+               <div class="brand-logo"><i class="fas fa-dollar-sign"></i> TRADE-FY</div>
+               <div class="brand-logo-collapsed"><i class="fa fa-doller"></i></div>
+            </a>
+         </div>
+         <div class="nav-wrapper">
+               <ul class="nav navbar-nav mt0">
+                     <li>
+                        <a href="#" data-target="#helpModal" data-toggle="modal">
+                        <em class="fa fa-question-circle"></em>
+                        </a>
+                     </li>
+                  </ul>
+            <ul class="nav navbar-nav navbar-right mt0">
+               <li class="dropdown dropdown-list">
+                  <a href="#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle" id="show-wallet">
+                     <strong><i class="fas fa-wallet"></i> Wallet</strong>
+                  </a>
+                  <ul class="dropdown-menu col-md-2 col-sm-4 col-xs-10">
+                     <li>
+                        <div class="table-responsive">
+                           <table class="table table-striped table-bordered table-hover">
+                              <thead>
+                                 <tr>
+                                    <th class="bg-primary">Available Amount</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="text-center " id="wallet-amount"></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </li>
+                  </ul>
+               </li>
+               <li class="dropdown dropdown-list">
+                  <a href="#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle"
+                     id="notification-click">
+                     <em class="fa fa-bell"></em>
+                     <div class="label label-danger">1</div>
+                  </a>
+                  <ul class="dropdown-menu col-md-4 col-sm-6 col-xs-12">
+                     <li>
+                        <div class="table-responsive">
+                           <table class="table table-striped table-bordered table-hover">
+                              <thead>
+                                 <tr>
+                                    <th>Buy/Sell</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                 </tr>
+                              </thead>
+                              <tbody class="short-order-history">
+                                 <!-- Transactions -->
+                              </tbody>
+                           </table>
+                        </div>
+                     </li>
+                  </ul>
+               </li>
+               <li class="dropdown">
+                  <a href="#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
+                     <em class="fa fa-user"></em>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="" data-target="#profileModal" data-toggle="modal">Profile</a>
+                     </li>
+                     <li><a href="#">Settings</a>
+                     </li>
+                     <li class="divider"></li>
+                     <li><a href="/logout">Logout</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <aside class="aside asideBuySell">
+         <nav class="sidebar">
+            <ul class="nav">
+               <li>
+                  <div class="item user-block has-submenu">
+                     <div class="user-block-picture">
+                        <img src="app/images/user/3.png" alt="Avatar" width="60" height="60"
+                           class="img-thumbnail img-circle account-img-mb">
+                     </div>
+                     <div class="user-block-info">
+                        <span class="user-block-name item-text"></span>
+                        <span class="user-block-role"><i class="fa fa-check text-green"></i> Verified</span>
+                        <div class="label label-primary"><i class="fa fa-lock"></i> <a href="/logout">Logout</a></div>
+                     </div>
+                  </div>
+               </li>
+               <li class="">
+                  <div class="row">
+                     <div class="col-md-12 m-t-9">
+                        <!-- Aside Tabs-->
+                        <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+                           <ul id="myTabs" class="nav nav-tabs nav-tabs-noboder minus-margin-tab" role="tablist">
+                              <li role="presentation" class=""><a href="#buyModal" class="tab-link-pad"
+                                    id="trade-tab" role="tab" data-toggle="modal" aria-controls="home"
+                                    aria-expanded="true"><i class="fa fa-gavel"></i> Trade</a></li>
+                              <li role="presentation" class=""><a href="" class="tab-link-pad" role="tab"
+                                    id="transfer-tab" data-toggle="modal" aria-controls="profile" aria-expanded="false">
+                                    Transfer</a></li>
+                           </ul>
+                           <div id="myTabContent" class="tab-content tab-content-BuySell">
+                              <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                                 <div class="">
+                                    <div class="panel-heading">
+                                    </div>
+                                    <div class="panel-wrapper collapse in h-auto">
+                                       <div class="pannel panel-body">
+                                          <div class="input-group col-sm-12 m-b">
+                                             <span class="input-group-addon btn-primary group-btn-hover darkformfield"
+                                                data-target="#manageProfileModal" data-toggle="modal" id="mprofile"></i> Manage
+                                                Profile</span>
+                                          </div>
+                                          <div class="m-t-9">
+                                             <div class="input-group col-sm-12 m-b">
+                                                <button type="button" data-target="#setupAcctModal" data-toggle="modal"
+                                                   class="btn btn-primary dropdown-toggle btn-block" id="setup-acct">Set
+                                                   Up Account
+                                                </button>
+                                             </div>
+                                          </div>
+                                          <div class="row">
+                                             <div class="btn-group m-t-9 col-md-12 col-sm-12 col-xs-12">
+                                                <button type="button" data-target="#manageAccountModal"
+                                                   data-toggle="modal" class="btn btn-danger  btn-block">Manage Account
+                                                </button>
+                                             </div>
+                                             <div class="btn-group m-t-9 col-md-12 col-sm-12 col-xs-12">
+                                                <a class="btn btn-primary btn-block" href="/prices" role="button"
+                                                   target="_blank">Live Pricing</a>
+                                                </button>
+                                             </div>
+                                          </div>
+                                          <div class="m-t-9">
+                                             <div class="input-group col-sm-12 m-b" id="sym">
+                                                <a class="input-group-addon btn-primary group-btn-hover darkformfield"
+                                                   href="/symbol" role="button" target="_blank"></i>Find Symbol</a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- tabs -->
+               </li>
+            </ul>
+         </nav>
+      </aside>
+      <section>
+         <section class="main-content">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="panel panel-default">
+                     <div class="panel-heading"><strong class="text-blue">Live Dashboard</strong>
+                       
+                        <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel"
+                           class="pull-right">
+                           <em class="fa fa-minus"></em>
+                        </a>
+                        <a href="#"  class="pull-right">
+                        <em class="fa fa-refresh dashboard-click"></em>
+                       </a>
+                     </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Symbol</th>
+                                 <th>Last Price</th>
+                                 <th>Today's Gain/Loss</th>
+                                 <th>Total Gain/Loss</th>
+                                 <th>Current Value</th>
+                                 <th>Quantity</th>
+                                 <th>Cost Basis</th>
+                              </tr>
+                           </thead>
+                           <tbody id="dashboard-body">
+                              <!-- Dashboard -->
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="panel-footer">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="float-right">
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="disabled"><a href="javascript:void(0);">First</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="disabled"><a href="javascript:void(0);">Prev</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="active"><a href="javascript:void(0);">1</a></li>
+                                    <li><a href="javascript:void(0);">2</a></li>
+                                    <li><a href="javascript:void(0);">3</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li><a href="javascript:void(0);">Next</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li><a href="javascript:void(0);">Last</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+            <!-- First Row Ends Here -->
+            
+            <!-- Chart Starts Here -->
+            <div class="row">
+               <div class="col-lg-9">
+                  <div class="panel panel-default">
+                     <div class="panel-collapse">
+                        <div class="panel-body">
+                           <div class="row">
+                              <h4 class="col-md-3 offset-md-6 m-r-10">Stock Data </h4>
+                              <div class="col-md-3 input-group">
+
+                                 <input type="text" class="form-control text-left" placeholder="Symbol" id="text-chart">
+                                 <div class="input-group-btn">
+                                    <button type="button" data-toggle="dropdown"
+                                       class="btn btn-primary form-btn-padding dropdown-toggle" id="chartSearch">search
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="chartContainer" class="h-500">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Chart Ends Here -->
+
+               <div class="col-md-3">
+
+                  <!-- API News Starts Here -->
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <div class="pull-right"><i class="fa fa-bullhorn"></i></div>
+                        <div class="panel-title">Upcoming News</div>
+                     </div>
+                     <form class="navbar-form" role="search">
+                        <div class="input-group add-on">
+                           <input class="form-control" placeholder="Search" name="search-term" id="search-term"
+                              type="text">
+                           <div class="input-group-btn">
+                              <button class="btn btn-default" id="searchButton" type="submit"><i
+                                    class="glyphicon glyphicon-search"></i></button>
+                           </div>
+                        </div>
+                     </form>
+                     <a href="#" class="list-group-item">
+                        <div class="media">
+                           <div class="media-body">
+                              <p></p>
+                              <strong class="media-heading text-primary" id="title_1"></strong>
+                              <p class="mb-sm">
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#" class="list-group-item">
+                        <div class="media">
+                           <div class="media-body">
+                              <p></p>
+                              <strong class="media-heading text-primary" id="title_2"></strong>
+                              <p class="mb-sm">
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+                     <a href="#" class="list-group-item">
+                        <div class="media">
+                           <div class="media-body">
+                              <p></p>
+                              <strong class="media-heading text-primary" id="title_3"></strong>
+                              <p class="mb-sm">
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            </div>
+            </div>
+            <!-- Orders Book -->
+
+            <!-- Open Orders -->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="panel panel-default">
+                     <div class="panel-heading"><strong class="text-blue">Open Orders</strong>
+                        <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel"
+                           class="pull-right">
+                           <em class="fa fa-minus"></em>
+                        </a>
+                        <a href="#"  class="pull-right">
+                              <em class="fa fa-refresh"></em>
+                             </a>
+                     </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                           <thead>
+                              <tr>
+                                 <th><i class="fa fa-plus"></i></th>
+                                 <th>Order Date</th>
+                                 <th>Type</th>
+                                 <th>Symbol</th>
+                                 <th>Price</th>
+                                 <th>Total Cost</th>
+                                 <th>Status</th>
+
+                              </tr>
+                           </thead>
+                           <tbody>
+                              
+                             
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="panel-footer">
+                        <div class="row">
+                           <div class="col-lg-2">
+                              <div class="input-group">
+                                 <input type="text" placeholder="Search" class="input-sm form-control">
+                                 <span class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-default">Search</button>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="col-lg-8"></div>
+                           <div class="col-lg-2">
+                              <div class="input-group pull-right">
+                                 <select class="input-sm form-control">
+                                    <option value="0">Bulk action</option>
+                                    <option value="1">Cancel All</option>
+                                 </select>
+                                 <span class="input-group-btn">
+                                    <button class="btn btn-sm btn-default">Apply</button>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- My Order History -->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="panel panel-default">
+                     <div class="panel-heading"><strong class="text-blue">My Order History</strong>
+                        <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel"
+                           class="pull-right">
+                           <em class="fa fa-minus"></em>
+                        </a>
+                        <a href="#"  class="pull-right">
+                              <em class="fa fa-refresh" id="orderHistory-click"></em>
+                             </a>
+                     </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Order Date</th>
+                                 <th>Type</th>
+                                 <th>Symbol</th>
+                                 <th>Price</th>
+                                 <th>Quantity</th>
+                                 <th>Total Cost</th>
+                              </tr>
+                           </thead>
+                           <tbody class="order-history">
+                              <!-- Transactions -->
+                           </tbody>
+                        </table>
+                     </div>
+
+                     <div class="panel-footer">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="float-right">
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="disabled"><a href="javascript:void(0);">First</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="disabled"><a href="javascript:void(0);">Prev</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="active"><a href="javascript:void(0);">1</a></li>
+                                    <li><a href="javascript:void(0);">2</a></li>
+                                    <li><a href="javascript:void(0);">3</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li><a href="javascript:void(0);">Next</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li><a href="javascript:void(0);">Last</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </section>
+
+         <!-- FOOTER -->
+         <footer class="footer bg-dark-2">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 col-sm-8">
+                     <h4 class="logo"><i class="fas fa-dollar-sign"></i> TRADE-FY</h4>
+                     <p>Before investing, consider the funds' investment objectives, risks, charges, and expenses.
+                        Contact Trade-FY for a prospectus containing this information.</p>
+                     <ul class="list-inline social">
+                        <li>
+                           <a href="#" class="bg-twitter"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                           <a href="#" class="bg-dribbble"><i class="fab fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                           <a href="#" class="bg-linkedin"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                           <a href="#" class="bg-googleplus"><i class="fab fa-google"></i></a>
+                        </li>
+                        <li>
+                           <a href="#" class="bg-facebook"><i class="fab fa-facebook"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="col-md-3 col-sm-6">
+                     <h5>Quick Links</h5>
+                     <ul class="list-unstyled footer-list">
+                        <li><a href="#">Fee Info</a></li>
+                        <li><a href="#">Start Trading</a></li>
+                        <li><a href="#">We are Hiring</a></li>
+                        <li><a href="#">Blog Posts</a></li>
+                        <li><a href="#">API Docs</a></li>
+                     </ul>
+                  </div>
+
+                  <div class="col-md-3 col-sm-6">
+                     <h5>Useful Links</h5>
+                     <ul class="list-unstyled footer-list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help &amp; Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                     </ul>
+                  </div>
+               </div> 
+               <!-- end row -->
+            </div> 
+            <!-- end container -->
+         </footer>
+         <!-- End FOOTER -->
+      </section>
+   </section>
+   <script src="plugins/jquery/jquery.js"></script>
+   <script src="plugins/bootstrap/js/bootstrap.js"></script>
+   <script src="plugins/chosen/chosen.jquery.js"></script>
+   <script src="plugins/velocity/velocity.js"></script>
+   <script src="plugins/velocity/velocity.ui.js"></script>
+   <script src="plugins/slider/js/bootstrap-slider.js"></script>
+   <script src="plugins/filestyle/bootstrap-filestyle.js"></script>
+   <script src="plugins/animo/animo.js"></script>
+   <script src="plugins/sparklines/jquery.sparkline.js"></script>
+   <script src="plugins/slimscroll/jquery.slimscroll.js"></script>
+   <script src="plugins/datatable/media/js/jquery.dataTables.js"></script>
+   <script src="plugins/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
+   <script src="plugins/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>
+   <script src="plugins/datatable/extensions/ColVis/js/dataTables.colVis.js"></script>
+   <script src="tradify/highcharts.js"></script>
+   <script src="tradify/exporting.js"></script>
+   <script src="plugins/datatable/extensions/ColVis/js/dataTables.colVis.js"></script>
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+   <script src="plugins/fastclick/fastclick.js"></script>
+   <script src="app/js/tradify.js"></script>
+   </script>
+   <script src="js/transactions.js" type="text/javascript"></script>
+   <script src="js/newsAPI.js" type="text/javascript"></script>
+   <script src="js/dashboard.js" type="text/javascript"></script>
+<!-- Start Modal for Help -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog panel-default" role="document">
+   <div class="modal-content modal-window1">
+      <div class="modal-header bg-primary">
+         <h5 class="modal-title" id="helpModalTitle">Help</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+        <p>Please follow the below steps to trade using Trade-FY.</p>
+        <p>1. SetUpAccount </p>
+        <p></p>Click on SetUp Account button at the right panel to add your bank account.</p>
+       <p> 2. Transfer Money </p>
+       <p> Click on Transfer to Transfer money </p>
+       <p> 3. Trade </p>
+       <p> Click on Trade to trade </p>
+       
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+   </div>
+</div>
+</div>
+   <!-- Start Modal for Wallet -->
+   <div class="modal fade" id="walletModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog custom-modal panel-default" role="document">
+         <div class="modal-content modal-window1">
+            <div class="modal-header bg-primary">
+               <h5 class="modal-title" id="walletModalTitle">Transfer Money</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label class="control-label">From Account</label>
+                  <input id="id-fromacct" type="text" name="fromacct" required class="form-control" readonly="readonly">
+               </div>
+
+               <div class="form-group">
+                  <label class="control-label">To Account</label>
+                  <input id="id-toacct" type="text" name="toacct" required class="form-control" readonly="readonly">
+               </div>
+
+               <div class="form-group">
+                  <label class="control-label">Date</label>
+                  <input type="date" name="currentdate" required data-parsley-equalto="#trans-date" class="form-control"
+                     id="trans-date">
+               </div>
+               <div class="form-group">
+
+                  <label class="control-label">Amount * </label>
+                  <input type="text" name="amount" required data-parsley-equalto="#id-amount" class="form-control"
+                     id="trans-amount">
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary" id="transferBtn">Submit</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Modal for Buy -->
+
+   <!-- Modal -->
+   <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog custom-modal" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="buyModal">Trade</h5>
+               <p class="qnt-err-text text-c-red"></p>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label class="control-label">Account</label>
+                  <input id="id-acct" type="text" name="acct" required class="form-control" readonly="readonly">
+               </div>
+
+               <div class="form-group">
+                  <label class="control-label">Available Cash</label>
+                  <input id="cash" type="text" name="cash" required class="form-control" readonly="readonly">
+               </div>
+
+               <div class="row form-group">
+                  <div class="col-md-5">
+                     <label class="control-label">Transaction Type</label>
+                     <button class="btn btn1 btn-md btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                        id="transactionType"> <span id="opt-trans">Select</span> <span class="caret"></span>
+                     </button>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" id="3" href="#">Stock/ETF</a></li>
+                        <li><a class="dropdown-item" id="4" href="#">Mutual Fund</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-7">
+                     <label class="control-label">Symbol </label>
+                     <div class="input-group ">
+                        <input type="text" class="form-control text-left" placeholder="search" id="symbol-text">
+                        <div class="input-group-btn">
+                           <button type="button" data-toggle="dropdown"
+                              class="btn btn-primary form-btn-padding dropdown-toggle" id="searchSymbol">search
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <input type="hidden" class="form-control " placeholder="" id="currentPrice" readonly="readonly">
+               </div>
+               <div class="row form-group">
+                  <div class="col-md-3">
+                     <label class="control-label">Action </label>
+                     <button class="btn btn1 btn-md btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                        id="options"> <span id="opt">Select</span> <span class="caret"></span>
+                     </button>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" id="1" href="#">Buy</a></li>
+                        <li><a class="dropdown-item" id="2" href="#">Sell </a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4">
+                     <label class="control-label">Order Type</label>
+                     <button class="btn btn1 btn-md p-5 btn-secondary dropdown-toggle dropdown-toggle-split"
+                        type="button" data-toggle="dropdown" id="orderType"> <span id="opt2">Select</span> <span
+                           class="caret"></span>
+                     </button>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" id="5" href="#">Market Order</a></li>
+                        <li><a class="dropdown-item" id="6" href="#">Limit Order</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4">
+                     <label class="control-label">Quantity </label>
+                     <input type="text" id="quantity" name="quantity" required data-parsley-equalto="#id-amount"
+                        class="form-control">
+
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary" id="order">Order</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End Buy Modal -->
+
+   <!-- Start Modal for manage profile -->
+   <div class="modal fade" id="manageProfileModal" tabindex="-1" role="dialog" aria-labelledby="manageProfileLabel"
+      aria-hidden="true">
+      <div class="modal-dialog custom-modal" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="manageProfileModalLabel">Manage Profile</h5>
+               <p class="email-err-text text-c-red"></p>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label class="control-label">Full Name</label>
+                  <input id="mp-name" type="text" name="mp-name" required class="form-control" readonly="readonly">
+               </div>
+
+               <div class="form-group">
+                  <label class="control-label">Email</label>
+                  <input id="mp-email" type="text" name="mp-email" required class="form-control" readonly="readonly">
+               </div>
+
+               <div>
+                  <label class="control-label">Change Email </label>
+                  <input type="text" id="mp-change-email" name="mp-change-email" required
+                     data-parsley-equalto="#mp-change-email" class="form-control">
+
+               </div>
+               <!-- <div>
+                  <label class="control-label">Change Password </label>
+                  <input type="text" name="mp-change-pwd" required data-parsley-equalto="#id-zip" class="form-control"
+                     id="mp-change-pwd">
+
+               </div> -->
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary" id="update-profile">Update</button>
+            </div>
+         </div>
+      </div>
+   </div>
+ <!-- End Manage Profile Modal -->
+
+   <!-- Start Modal for profile -->
+   <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog custom-modal" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="profileModalLabel">Your Profile</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+
+            <div class="form-group">
+                  <label class="control-label">Trade-FY Account</label>
+                  <input id="p-tradeAcct" type="text" name="p-tradeAcct" required class="form-control" readonly="readonly">
+               </div>
+               <div class="form-group">
+                  <label class="control-label">Full Name</label>
+                  <input id="p-name" type="text" name="p-name" required class="form-control" readonly="readonly">
+               </div>
+
+               <div class="form-group">
+                  <label class="control-label">Email</label>
+                  <input id="p-email" type="text" name="p-email" required class="form-control" readonly="readonly">
+               </div>
+               <div class="form-group">
+                     <label class="control-label">Account Creation Date</label>
+                     <input id="p-customerSince" type="text" name="mp-email" required class="form-control" readonly="readonly">
+                  </div>
+
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+            </div>
+         </div>
+      </div>
+   </div>
+  <!-- profile modal ends here -->
+
+   <!-- Manage Account Modal start here -->
+   <div class="modal fade custome-modal" id="manageAccountModal" tabindex="-1" role="dialog"
+      aria-labelledby="manageAccountModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="manageAccountModalLabel">Manage Accounts</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <button type="button" class="btn btn-secondary pull-right" id="mc-delete">Delete</button>
+               <button type="button" class="btn btn-primary pull-right" id="mc-update">Update</button>
+
+               <br>
+               <p id="mc-bank-name">Bank Name : </p>
+               <p id="mc-bank-acctnum">Account Number : </p>
+               <p id="mc-bank-address">Billing Address : </p>
+               <p id="mc-bank-zip">Zip : </p>
+
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- manage account modal ends here -->
+
+   <!-- profile modal ends here -->
+
+   <!-- start modal for setup-acct -->
+   <div class="modal fade" id="setupAcctModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog custom-modal" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Account Setup</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                  <label class="control-label">Bank Name</label>
+                  <input id="bank-name" type="text" name="bankname" required class="form-control">
+               </div>
+
+               <div class="form-group">
+                  <label class="control-label">Bank Account Number</label>
+                  <input id="bank-acctnum" type="text" name="bankacct" placeholder="9-digits" required
+                     class="form-control">
+               </div>
+
+               <div>
+                  <label class="control-label">Billing Address </label>
+                  <input type="text" id="billing-address" name="billaddress" required
+                     data-parsley-equalto="#bill-address" class="form-control">
+
+               </div>
+               <div>
+                  <label class="control-label">Zip </label>
+                  <input type="text" name="zip" required data-parsley-equalto="#id-zip" placeholder="5-digits"
+                     class="form-control" id="zip">
+
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary" id="setUpAcctBtn">Submit</button>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <script src="js/index.js" type="text/javascript"></script>
+   <script src="js/myChart.js" type="text/javascript"></script>
+
+   <!--modal for wallet -->
+   <script type="text/javascript">
+      $(function () {
+         $("#1").click(function () {
+            $("#opt").text($(this).text());
+         });
+         $("#2").click(function () {
+            $("#opt").text($(this).text());
+         });
+      });
+   </script>
+   <script type="text/javascript">
+      $(function () {
+         $("#3").click(function () {
+            $("#opt-trans").text($(this).text());
+         });
+         $("#4").click(function () {
+            $("#opt-trans").text($(this).text());
+         });
+      });
+   </script>
+   <script type="text/javascript">
+      $(function () {
+         $("#5").click(function () {
+            $("#opt2").text($(this).text());
+         });
+         $("#6").click(function () {
+            $("#opt2").text($(this).text());
+         });
+      });
+   </script>
+   <!-- opt-trans -->
+
+   <!-- Alert Modal -->
+   <div class="modal fade" id="alertModal" tabindex="10" role="dialog" aria-labelledby="modalInvalidNameImageURL"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <p class="lead"></p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>
