@@ -1,0 +1,63 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">Mongo Web Scraper</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active ml-4" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link ml-4" href="/saved">Saved Articles</a>
+            <a class="btn btn-danger scrape-btn ml-4" role="button" href="/scrape"><strong>Get New
+                    Articles</strong></a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main display -->
+<div class="container-fluid">
+    <div class="jumbotron text-center">
+        <div class="overlay"></div>
+        <div class="caption">
+            <h1 class="display-3 mb-4">Mongo Web Scraper</h1>
+            <h3 class="display-5">Daily Democrat Articles</h3>
+        </div>
+    </div>
+
+    <!-- New articles -->
+    <div class="row">
+        <div class="col-12">
+            {{#if articles}}
+            {{#each articles}}
+            <div class="card text-white bg-secondary mb-3">
+                <div class="card-header">
+                    <button id="{{_id}}" class="btn btn-warning btn-sm save-btn">Save Article</button>
+                </div>
+                <div class="card-body">
+                    <a href={{link}} target="_blank">
+                        <h3>{{title}}</h3>
+                    </a>
+                    <p class="card-text">
+                        {{summary}}
+                    </p>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="card">
+                <div class="card-body text-center">
+                    There are no new articles
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-success mt-auto text-center py-3">
+    <div class="container">
+        <span>Mongo Web Scraper</span>
+    </div>
+</footer>
