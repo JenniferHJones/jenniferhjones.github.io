@@ -1,0 +1,13 @@
+.footer {
+    background-color: darkred;
+    color: white;
+    /* height: 50px; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 40px;
+    /* margin-top: 20px; */
+}
+.logo {
+    height: 30px;
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Alladin",
+    "image": "./images/Alladin.jpg"
+  },
+  {
+    "id": 2,
+    "name": "CaptainMarvel",
+    "image": "./images/CaptainMarvel.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Dumbo",
+    "image": "./images/Dumbo.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Endgame",
+    "image": "./images/Endgame.jpg"
+  },
+  {
+    "id": 5,
+    "name": "LateNight",
+    "image": "./images/LateNight.jpg"
+  },
+  {
+    "id": 6,
+    "name": "LionKing",
+    "image": "./images/LionKing.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Maleficent",
+    "image": "./images/Maleficent.jpg"
+  },
+  {
+    "id": 8,
+    "name": "MenInBlack",
+    "image": "./images/MenInBlack.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Shazam",
+    "image": "./images/Shazam.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Spiderman",
+    "image": "./images/Spiderman.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Tolkien",
+    "image": "./images/Tolkien.jpg"
+  },
+  {
+    "id": 12,
+    "name": "X-men",
+    "image": "./images/X-men.jpg"
+  }
+]
