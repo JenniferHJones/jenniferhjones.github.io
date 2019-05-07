@@ -3,9 +3,11 @@
 [Portfolio link](https://jenniferhjones.github.io/)
 
 ## Description
-This is a collection of the projects I worked on while attending the six-month Full-Stack Web Development bootcamp through the Continuing and Professional Education department at the University of California Davis. 
+
+This is a collection of the projects I worked on while attending the six-month Full-Stack Web Development bootcamp through the Continuing and Professional Education department at the University of California Davis.
 
 ## Project List
+
 1. [Psychic Game](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/psychic)
 2. [Crystal Collector Game](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/crystal)
 3. [Trivia Game](http://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/trivia)
@@ -18,3 +20,4 @@ This is a collection of the projects I worked on while attending the six-month F
 10. [Eat the Burger App](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/burger)
 11. [Trade-FY](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/Trade-FY) (second group project)
 12. [Mongo Webscraper](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/webscraper)
+13. [Clicky Game](https://github.com/JenniferHJones/jenniferhjones.github.io/tree/master/projects/clicky)
