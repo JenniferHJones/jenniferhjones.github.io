@@ -52,19 +52,19 @@ Users may also do the following via the navbar:
 
 ### Home Page - Navbar
 
-![TBM App Homepage Screenshot](./client/src/images/Home1Sm.png)
+![TBM App Homepage Screenshot](./client/src/images/Home1Sm.PNG)
 
 ---
 
 ### Home Page - Overview & Footer
 
-![TBM App Homepage Screenshot](./client/src/images/Home2Sm.png)
+![TBM App Homepage Screenshot](./client/src/images/Home2Sm.PNG)
 
 ---
 
 ### Pricing Page
 
-![TBM App Pricing Screenshot](./client/src/images/PricingSm.png)
+![TBM App Pricing Screenshot](./client/src/images/PricingSm.PNG)
 
 ---
 
